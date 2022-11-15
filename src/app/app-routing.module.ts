@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { EmployeeComponent } from './employee/employee.component';
+
+
 
 const routes: Routes = [];
 
@@ -11,14 +14,19 @@ const routes: Routes = [];
   imports: [
     RouterModule.forRoot(routes),
     HttpClientModule,
-    AppRoutingModule,
+    AppComponent,
+    EmployeeComponent,
     BrowserModule,
     FormsModule
   ],
 
-  // declarations:[AppComponent,],
-  // bootstrap:[AppComponent]
+   declarations:[
+  
+ 
 
-  exports: [RouterModule]
+  ],
+ providers:[],
+
+
 })
-export class AppRoutingModule { }
+export class AppModule { }
